@@ -65,13 +65,13 @@
 
   /* ── Hero ─────────────────────────────────────────────── */
 
-  .hero{ padding: clamp(1.5rem, 4vw, 3rem) 0 0; text-align:center; }
+  .hero{ padding: clamp(1rem, 2.5vw, 1.75rem) 0 0; text-align:center; }
 
   .om{
     display:block;
-    width:clamp(1.9rem, 5vw, 2.5rem);
+    width:clamp(1.6rem, 4vw, 2.1rem);
     height:auto;
-    margin:0 auto .35rem;
+    margin:0 auto .25rem;
     opacity:.9;
   }
 
@@ -112,10 +112,10 @@
     font-family:"Gilda Display", Georgia, serif;
     font-weight:400;
     color:var(--gold);
-    font-size:clamp(2.9rem, 13vw, 6.5rem);
+    font-size:clamp(2.6rem, 11vw, 5.5rem);
     line-height:.95;
     letter-spacing:-.005em;
-    margin:.6rem 0 0;
+    margin:.4rem 0 0;
   }
   .names .amp{
     font-style:italic;
@@ -127,9 +127,9 @@
   }
 
   .occasion{
-    margin:1.1rem auto 0;
+    margin:.7rem auto 0;
     max-width:32rem;
-    font-size:clamp(1.05rem,.95rem + .6vw,1.3rem);
+    font-size:clamp(1.0rem,.92rem + .5vw,1.2rem);
   }
   .occasion strong{ font-weight:700; }
 
@@ -138,7 +138,7 @@
     height:1px;
     background:linear-gradient(90deg, transparent, var(--gold-light), transparent);
     border:0;
-    margin:clamp(2rem,5vw,3rem) auto;
+    margin:clamp(1.25rem,3vw,1.75rem) auto;
   }
 
   /* ── When / Where ─────────────────────────────────────── */
@@ -146,7 +146,7 @@
   .facts{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));
-    gap:clamp(1.5rem,4vw,3.5rem);
+    gap:clamp(1.25rem,3vw,2.5rem);
     text-align:center;
   }
 
@@ -156,25 +156,25 @@
     text-transform:uppercase;
     font-weight:700;
     color:var(--leaf);
-    margin:0 0 .55rem;
+    margin:0 0 .4rem;
   }
 
   .facts .big{
     font-family:"Gilda Display", Georgia, serif;
-    font-size:clamp(1.6rem, 1.1rem + 2vw, 2.35rem);
+    font-size:clamp(1.5rem, 1.05rem + 1.8vw, 2.1rem);
     line-height:1.14;
     color:var(--ink);
     margin:0;
   }
 
-  .facts .sub{ margin:.4rem 0 0; opacity:.86; }
+  .facts .sub{ margin:.3rem 0 0; opacity:.86; }
 
   .actions{
     display:flex;
     flex-wrap:wrap;
     gap:.75rem;
     justify-content:center;
-    margin-top:clamp(2rem,5vw,3rem);
+    margin-top:clamp(1.25rem,3vw,2rem);
   }
 
   .btn{
@@ -200,14 +200,14 @@
   .rites{
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(17rem,1fr));
-    gap:clamp(1.5rem,4vw,3rem);
+    gap:clamp(1rem,3vw,1.75rem);
   }
 
   .rite{
     background:linear-gradient(180deg, rgba(255,255,255,.42), rgba(244,225,192,.34));
     border:1px solid rgba(200,126,28,.24);
     border-radius:2px;
-    padding:clamp(1.5rem,3.5vw,2.25rem);
+    padding:clamp(1.25rem,3vw,1.75rem);
   }
 
   .rite .who{
@@ -216,13 +216,13 @@
     text-transform:uppercase;
     font-weight:700;
     color:var(--rose);
-    margin:0 0 .5rem;
+    margin:0 0 .4rem;
   }
 
   .rite h2{
     font-family:"Gilda Display", Georgia, serif;
     font-weight:400;
-    font-size:clamp(1.5rem,1.2rem + 1.2vw,2rem);
+    font-size:clamp(1.4rem,1.15rem + 1vw,1.85rem);
     color:var(--gold);
     margin:0 0 .2rem;
     line-height:1.15;
@@ -233,16 +233,48 @@
     color:var(--ink);
     opacity:.55;
     font-size:1rem;
-    margin:0 0 1rem;
+    margin:0;
   }
 
   .rite p{ margin:0; font-size:1rem; }
+
+  .rite-details{ margin-top:.85rem; }
+
+  .rite-details summary{
+    display:flex;
+    align-items:center;
+    gap:.4rem;
+    cursor:pointer;
+    list-style:none;
+    font-size:.85rem;
+    font-weight:700;
+    letter-spacing:.03em;
+    color:var(--gold);
+    -webkit-tap-highlight-color:transparent;
+  }
+
+  .rite-details summary::-webkit-details-marker{ display:none; }
+
+  .rite-details summary::after{
+    content:"";
+    width:.5em;
+    height:.5em;
+    border-right:2px solid currentColor;
+    border-bottom:2px solid currentColor;
+    transform:rotate(45deg);
+    transition:transform .25s ease;
+    margin-left:.1em;
+  }
+
+  .rite-details[open] summary::after{ transform:rotate(-135deg); }
+
+  .rite-details p{ margin:.75rem 0 0; }
 
   /* ── Gallery ──────────────────────────────────────────── */
 
   .gallery-heading{
     text-align:center;
-    margin:0 0 clamp(1.5rem,4vw,2.25rem);
+    margin:0 0 clamp(1rem,2.5vw,1.5rem);
   }
 
   .gallery-heading .label{
@@ -299,7 +331,7 @@
 
   /* ── Closing ──────────────────────────────────────────── */
 
-  .closing{ text-align:center; padding-bottom:clamp(3rem,8vw,6rem); }
+  .closing{ text-align:center; padding-bottom:clamp(2rem,5vw,3.5rem); }
 
   .closing .welcome{
     font-family:"Gilda Display", Georgia, serif;
@@ -311,7 +343,7 @@
   }
 
   .hosts{
-    margin:clamp(1.75rem,4vw,2.5rem) 0 0;
+    margin:clamp(1.25rem,3vw,1.75rem) 0 0;
     font-size:1.05rem;
     line-height:1.9;
   }
@@ -325,7 +357,7 @@
     margin-bottom:.5rem;
   }
 
-  section{ padding-block: clamp(1rem,3vw,2rem); }
+  section{ padding-block: clamp(.5rem,1.5vw,1rem); }
 
   /* ── Scroll cue (mobile only) ─────────────────────────── */
 
@@ -441,14 +473,20 @@
         <p class="who">For our father</p>
         <h2>Sathabishekam</h2>
         <p class="years">PH Balasubramanian · 80 years</p>
-        <p>The rite marking a life that has seen a thousand full moons. Traditionally held once a man completes eighty years, it is celebrated as a second wedding: the couple is married again, before family, in gratitude for the years given to them.</p>
+        <details class="rite-details">
+          <summary>What it means</summary>
+          <p>The rite marking a life that has seen a thousand full moons. Traditionally held once a man completes eighty years, it is celebrated as a second wedding: the couple is married again, before family, in gratitude for the years given to them.</p>
+        </details>
       </article>
 
       <article class="rite">
         <p class="who">For our mother</p>
         <h2>Bheema Radha Santhi</h2>
         <p class="years">C Banumathi · 70 years</p>
-        <p>The rite of the seventieth year, named for the chariot that carries a person safely into their eighth decade. Prayers are offered for continued health, long life, and the wellbeing of the family gathered around her.</p>
+        <details class="rite-details">
+          <summary>What it means</summary>
+          <p>The rite of the seventieth year, named for the chariot that carries a person safely into their eighth decade. Prayers are offered for continued health, long life, and the wellbeing of the family gathered around her.</p>
+        </details>
       </article>
     </div>
   </div>
