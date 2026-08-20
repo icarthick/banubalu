@@ -68,11 +68,10 @@
   .hero{ padding: clamp(1.5rem, 4vw, 3rem) 0 0; text-align:center; }
 
   .om{
-    font-family:"Noto Sans Tamil", serif;
-    font-size:clamp(1.9rem, 5vw, 2.5rem);
-    color:var(--gold);
-    line-height:1;
-    margin:0 0 .35rem;
+    display:block;
+    width:clamp(1.9rem, 5vw, 2.5rem);
+    height:auto;
+    margin:0 auto .35rem;
     opacity:.9;
   }
 
@@ -279,7 +278,7 @@
 
 <header class="hero">
   <div class="wrap">
-    <p class="om" aria-hidden="true">&#3024;</p>
+    <img class="om" src="assets/om.svg" alt="" aria-hidden="true">
 
     <div class="canopy">
       <svg id="moons" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMax meet" role="img"
